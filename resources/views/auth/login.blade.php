@@ -66,6 +66,22 @@
                         </div>
                     </form>
                 </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Ingresa con Facebook
+                    </a>
+
+                    <a href="#" class="btn btn-twitter">
+                        <i class="fab fa-twitter"></i>
+                        Ingresa con Twitter
+                    </a>
+
+                    <a href="#" class="btn btn-google">
+                        <i class="fab fa-google"></i>
+                        Ingresa con Google
+                    </a>
+                </div>
             </div>
         </div>
     </div>
