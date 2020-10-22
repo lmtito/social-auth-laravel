@@ -67,7 +67,7 @@
                     </form>
                 </div>
                 <div class="card-footer text-center">
-                    <a href="#" class="btn btn-facebook">
+                    <a href="{{ route('login.facebook') }}" class="btn btn-facebook">
                         <i class="fab fa-facebook-f"></i>
                         Ingresa con Facebook
                     </a>
