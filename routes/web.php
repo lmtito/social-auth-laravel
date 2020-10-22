@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login/facebook', [App\Http\Controllers\SocialLoginController::class, 'redirectToFacebook'])->name('login.facebook');
-Route::get('login/facebook/callback', [App\Http\Controllers\SocialLoginController::class, 'handleFacebookCallback']);
+Route::get('login/{socialNetwork}', [App\Http\Controllers\SocialLoginController::class, 'redirectToSocialNetwork'])->name('login.social');
+Route::get('login/{socialNetwork}/callback', [App\Http\Controllers\SocialLoginController::class, 'handleSocialNetworkCallback']);
 
 Auth::routes();
 
