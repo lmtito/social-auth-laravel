@@ -13,8 +13,12 @@
 $facebook-color: #1877f2;
 $twitter-color: #1da1f2;
 $google-color: #ea4335;
+$linkedin-color: #007bb5;
+$github-color: #211f1f;
+$gitlab-color: #E3442A;
+$bitbucket-color: #2684FF;
 
-.btn-facebook, .btn-twitter, .btn-google {
+.btn-facebook, .btn-twitter, .btn-google, .btn-linkedin, .btn-github, .btn-gitlab, .btn-bitbucket {
     color: white;
     &:hover, &:active, &:focus {
         color: white;
@@ -34,4 +38,24 @@ $google-color: #ea4335;
 .btn-google {
     background-color: $google-color;
     border-color: darken($google-color, 3%);
+}
+
+.btn-linkedin {
+    background-color: $linkedin-color;
+    border-color: darken($linkedin-color, 3%);
+}
+
+.btn-github {
+    background-color: $github-color;
+    border-color: darken($github-color, 3%);
+}
+
+.btn-gitlab {
+    background-color: $gitlab-color;
+    border-color: darken($gitlab-color, 3%);
+}
+
+.btn-bitbucket {
+    background-color: $bitbucket-color;
+    border-color: darken($bitbucket-color, 3%);
 }

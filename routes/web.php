@@ -18,8 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login/{socialNetwork}', [App\Http\Controllers\SocialLoginController::class, 'redirectToSocialNetwork'])->name('login.social');
-Route::get('login/{socialNetwork}/callback', [App\Http\Controllers\SocialLoginController::class, 'handleSocialNetworkCallback']);
+// Sólo podemos acceder a estas rutas si no estamos autenticados
+Route::get('login/{socialNetwork}', [App\Http\Controllers\SocialLoginController::class, 'redirectToSocialNetwork'])->name('login.social')->middleware('guest', 'social_network');
+Route::get('login/{socialNetwork}/callback', [App\Http\Controllers\SocialLoginController::class, 'handleSocialNetworkCallback'])->middleware('guest');
 
 Auth::routes();
 

@@ -10,6 +10,8 @@ class SocialProfile extends Model {
     use HasFactory;
     protected $guarded = [];    // Desactiva la protección contra asignación masiva
 
+    public static $allowed = ['facebook', 'twitter', 'google', 'linkedin', 'github', 'gitlab', 'bitbucket'];
+
     public function user() {
         return $this->belongsTo(User::class);
     }

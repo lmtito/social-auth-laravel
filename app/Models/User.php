@@ -46,6 +46,6 @@ class User extends Authenticatable {
     }
 
     public function getAvatarAttribute() {
-        return optional( $this->profiles->first() )->avatar ?? url('images/default.jpg');
+        return optional( $this->profiles->last() )->avatar ?? url('images/default.jpg');
     }
 }

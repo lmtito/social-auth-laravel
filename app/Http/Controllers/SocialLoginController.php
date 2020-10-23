@@ -11,16 +11,17 @@ use Laravel\Socialite\Facades\Socialite;
 class SocialLoginController extends Controller {
 
     public function redirectToSocialNetwork($socialNetwork) {
-        return Socialite::driver($socialNetwork)->redirect();
+        return Socialite::driver($socialNetwork)->redirect();        
     }
 
     public function handleSocialNetworkCallback($socialNetwork) {
-        if (!request('code')) {
+        try {
+            $socialUser = Socialite::driver($socialNetwork)->user();
+        }
+        catch (\Exception $e) {
+            // dd($e->getMessage());
             return redirect()->route('login')->with('warning', 'No pudimos determinar su inicio de sesión social.');
         }
-
-        $socialUser = Socialite::driver($socialNetwork)->user();
-        // dd($socialUser);
 
         // Verifica la existencia de un id de usuario de la red social
         $socialProfile = SocialProfile::firstOrNew([
@@ -36,7 +37,7 @@ class SocialLoginController extends Controller {
                 $user->name = $socialUser->getName();
                 $user->save();
             }
-            
+
             $socialProfile->avatar = $socialUser->getAvatar();
             $user->profiles()->save($socialProfile);
         }

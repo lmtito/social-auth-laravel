@@ -69,17 +69,37 @@
                 <div class="card-footer text-center">
                     <a href="{{ route('login.social', 'facebook') }}" class="btn btn-facebook">
                         <i class="fab fa-facebook-f"></i>
-                        Ingresa con Facebook
+                        <!--Ingresa con Facebook-->
                     </a>
 
-                    <a href="#" class="btn btn-twitter">
+                    <a href="{{ route('login.social', 'twitter') }}" class="btn btn-twitter">
                         <i class="fab fa-twitter"></i>
-                        Ingresa con Twitter
+                        <!--Ingresa con Twitter-->
                     </a>
 
-                    <a href="#" class="btn btn-google">
+                    <a href="{{ route('login.social', 'google') }}" class="btn btn-google">
                         <i class="fab fa-google"></i>
-                        Ingresa con Google
+                        <!--Ingresa con Google-->
+                    </a>
+
+                    <a href="{{ route('login.social', 'linkedin') }}" class="btn btn-linkedin">
+                        <i class="fab fa-linkedin"></i>
+                        <!--Ingresa con Linkedin-->
+                    </a>
+
+                    <a href="{{ route('login.social', 'github') }}" class="btn btn-github">
+                        <i class="fab fa-github"></i>
+                        <!--Ingresa con GitHub-->
+                    </a>
+
+                    <a href="{{ route('login.social', 'gitlab') }}" class="btn btn-gitlab">
+                        <i class="fab fa-gitlab"></i>
+                        <!--Ingresa con GitLab-->
+                    </a>
+
+                    <a href="{{ route('login.social', 'bitbucket') }}" class="btn btn-bitbucket">
+                        <i class="fab fa-bitbucket"></i>
+                        <!--Ingresa con Bitbucket-->
                     </a>
                 </div>
             </div>

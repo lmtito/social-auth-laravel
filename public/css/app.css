@@ -10905,7 +10905,11 @@ a.text-dark:focus {
 
 .btn-facebook,
 .btn-twitter,
-.btn-google {
+.btn-google,
+.btn-linkedin,
+.btn-github,
+.btn-gitlab,
+.btn-bitbucket {
   color: white;
 }
 
@@ -10917,7 +10921,19 @@ a.text-dark:focus {
 .btn-twitter:focus,
 .btn-google:hover,
 .btn-google:active,
-.btn-google:focus {
+.btn-google:focus,
+.btn-linkedin:hover,
+.btn-linkedin:active,
+.btn-linkedin:focus,
+.btn-github:hover,
+.btn-github:active,
+.btn-github:focus,
+.btn-gitlab:hover,
+.btn-gitlab:active,
+.btn-gitlab:focus,
+.btn-bitbucket:hover,
+.btn-bitbucket:active,
+.btn-bitbucket:focus {
   color: white;
 }
 
@@ -10934,5 +10950,25 @@ a.text-dark:focus {
 .btn-google {
   background-color: #ea4335;
   border-color: #e93627;
+}
+
+.btn-linkedin {
+  background-color: #007bb5;
+  border-color: #0071a6;
+}
+
+.btn-github {
+  background-color: #211f1f;
+  border-color: #191818;
+}
+
+.btn-gitlab {
+  background-color: #E3442A;
+  border-color: #e0391d;
+}
+
+.btn-bitbucket {
+  background-color: #2684FF;
+  border-color: #177bff;
 }
 
